@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>farhan_mustaque | Profile</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('background.gif') center/cover no-repeat;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      z-index: -1;
+    }
+
+    .card-wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+    }
+
+    .card {
+      width: 400px;
+      padding: 1.5rem;
+      background: rgba(20, 20, 30, 0.95);
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      transition: transform 0.1s ease;
+      transform-style: preserve-3d;
+      box-shadow: 0 50px 120px rgba(0,0,0,0.9);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      border-radius: 20px;
+    }
+
+    #clock {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #8e44ad;
+      box-shadow: 0 0 25px #9b59b6;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      color: #a29bfe;
+      margin-bottom: 1rem;
+    }
+
+    .typing-bio {
+      font-size: 1rem;
+      color: #ccc;
+      height: 60px;
+      overflow: hidden;
+      border-right: .15em solid #a29bfe;
+      white-space: nowrap;
+    }
+
+    .social-icons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      font-size: 1.3rem;
+      color: #a29bfe;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    .audio-player {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1f1f2e;
+      padding: 0.8rem;
+      border-radius: 15px;
+      box-shadow: inset 0 0 15px #8e44ad;
+      gap: 1rem;
+    }
+
+    .play-btn {
+      width: 40px;
+      height: 40px;
+      background: #8e44ad;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .play-btn:hover {
+      background: #a29bfe;
+    }
+
+    .progress {
+      flex: 1;
+      height: 6px;
+      background: #333;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-filled {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #8e44ad, #a29bfe);
+      transition: width 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card-wrapper" id="wrapper">
+  <div class="card" id="card">
+    <video autoplay muted loop>
+      <source src="background.mp4" type="video/mp4">
+    </video>
+    <div id="clock"></div>
+    <img src="avatar.jfif" alt="Avatar" class="avatar" />
+    <h1>farhan_mustaque</h1>
+    <div class="typing-bio" id="bio"> AntiSocial | Music Lover | Uneducated</div>
+<div class="social-icons">
+  <a href="https://youtube.com/@chillball_0?feature=shared" title="YouTube" target="_blank">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://www.instagram.com/fxrhan___/" title="Instagram" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://github.com/MAXO11FF" title="GitHub" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://media-hosting.imagekit.io/f2010f341ca34421/4f90c53a-4102-4aed-a60d-10328214184e.jfif?Expires=1841927171&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uVvFAE8TSDGzY22d6TsA47JXkg5fgkS~Zf2qA2HagOQkHHv6vj~ZT1I12MRChvPmDv1M55jmOsL~na9vxIKwdXTFr4G6kMKhZ3bNtDZLXN7i5G1eb~2S-U9gwMlKRzRGm~u8kBNQ~mjs~TiB5Nedofz~1Qvefxj4uFN0-kSBn~0~1beMcb3NHpWnHt3ZKhIoLW1iu-g2sV3R13MHRP5YdB-nPB9gacpaFod65AqNlNXyPlcUseyi6rTjQ-oNCvEhVQBIxdBR~14Cq13WZ5e8MkyYuHnbQNkxCfsT7bvTcK~c1IdUzkYJMlDvVq~MKQCVONmc3xYB4vo~hHi8LnI7cQ__" title="Discord" target="_blank">
+    <i class="fab fa-discord"></i>
+  </a>
+</div>
+    <div class="audio-player">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="progress" id="progressBar">
+        <div class="progress-filled" id="progressFill"></div>
+      </div>
+      <audio id="audio" src="audio.mp3"></audio>
+    </div>
+  </div>
+</div>
+
+<script>
+  const wrapper = document.getElementById('wrapper');
+  const profileCard = document.getElementById('card');
+
+  wrapper.addEventListener('mousemove', function(e) {
+    const bounds = wrapper.getBoundingClientRect();
+    const xInside = e.clientX - bounds.left;
+    const yInside = e.clientY - bounds.top;
+    const offsetX = (xInside - bounds.width / 2) / (bounds.width / 2);
+    const offsetY = (yInside - bounds.height / 2) / (bounds.height / 2);
+    profileCard.style.transform = `rotateX(${offsetY * 30}deg) rotateY(${offsetX * -30}deg)`;
+  });
+
+  wrapper.addEventListener('mouseleave', () => {
+    profileCard.style.transform = 'rotateX(0deg) rotateY(0deg)';
+  });
+
+  const audio = document.getElementById('audio');
+  const playButton = document.getElementById('playBtn');
+  const barContainer = document.getElementById('progressBar');
+  const barFill = document.getElementById('progressFill');
+
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playButton.innerText = '⏸';
+    } else {
+      audio.pause();
+      playButton.innerText = '▶';
+    }
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    let fraction = audio.currentTime / audio.duration;
+    let percentPlayed = fraction * 100;
+    if (!isNaN(percentPlayed)) {
+      barFill.style.width = `${percentPlayed}%`;
+    }
+  });
+
+  barContainer.addEventListener('click', function(e) {
+    const bounds = this.getBoundingClientRect();
+    const clickPos = e.clientX - bounds.left;
+    const totalWidth = bounds.width;
+    let newTime = (clickPos / totalWidth) * audio.duration;
+    if (!isNaN(newTime)) {
+      audio.currentTime = newTime;
+    }
+  });
+
+  function refreshClock() {
+    const rightNow = new Date();
+    const time = rightNow.toLocaleTimeString();
+    document.getElementById('clock').textContent = time;
+  }
+
+  refreshClock();
+  setInterval(refreshClock, 1000);
+</script>
+
+</body>
+</html>
